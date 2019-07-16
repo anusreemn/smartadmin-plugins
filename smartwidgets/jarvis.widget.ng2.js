@@ -197,16 +197,19 @@
             //*****************************************************************//
 
             // TODO : Push state does not work on IE9, try to find a way to detect IE and use a seperate filter
+            
+            if (self.o.ajaxnav === true) {
+                var widget_url = location.hash.replace(/^#/, '');
 
-			if (self.o.ajaxnav === true) {
-				var widget_url = location.hash.replace(/^#/, '');
-				self.storage.keySettings = 'Plugin_settings_' + widget_url + '_' + self.objId;
-				self.storage.keyPosition = 'Plugin_position_' + widget_url + '_' + self.objId;
-			} else if (self.initialized === false) {
-				var widget_url = self.o.pageKey || location.pathname;
-				self.storage.keySettings = 'jarvisWidgets_settings_' + widget_url + '_' + self.objId;
-				self.storage.keyPosition = 'jarvisWidgets_position_' + widget_url + '_' + self.objId;
-			}
+                widget_url = widget_url.split('?')[0]; // to not create separate LS entries for each param update
+
+                self.storage.keySettings = 'Plugin_settings_' + widget_url + '_' + self.objId;
+                self.storage.keyPosition = 'Plugin_position_' + widget_url + '_' + self.objId;
+            } else if (self.initialized === false) {
+                var widget_url = self.o.pageKey || location.pathname;
+                self.storage.keySettings = 'jarvisWidgets_settings_' + widget_url + '_' + self.objId;
+                self.storage.keyPosition = 'jarvisWidgets_position_' + widget_url + '_' + self.objId;
+            }
 
 		},
  
