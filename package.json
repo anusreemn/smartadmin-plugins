@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/griga/smartadmin-plugins.git"
+    "url": "git+https://github.com/anu91ab/smartadmin-plugins"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/griga/smartadmin-plugins/issues"
+    "url": "https://github.com/anu91ab/smartadmin-pluginsissues"
   },
-  "homepage": "https://github.com/griga/smartadmin-plugins#readme",
+  "homepage": "https://github.com/anu91ab/smartadmin-plugins#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
