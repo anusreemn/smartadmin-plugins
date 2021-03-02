@@ -200,6 +200,9 @@
 
 			if (self.o.ajaxnav === true) {
 				var widget_url = location.hash.replace(/^#/, '');
+                if (self.o.customWidgetUrl) {
+                    widget_url = self.o.customWidgetUrl;
+                }
 				self.storage.keySettings = 'Plugin_settings_' + widget_url + '_' + self.objId;
 				self.storage.keyPosition = 'Plugin_position_' + widget_url + '_' + self.objId;
 			} else if (self.initialized === false) {
