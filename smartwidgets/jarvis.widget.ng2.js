@@ -211,6 +211,9 @@
                 self.storage.keyPosition = 'Plugin_position_' + widget_url + '_' + self.objId;
             } else if (self.initialized === false) {
                 var widget_url = self.o.pageKey || location.pathname;
+                if (self.o.customWidgetUrl) {
+                    widget_url = self.o.customWidgetUrl;
+                }
                 self.storage.keySettings = 'jarvisWidgets_settings_' + widget_url + '_' + self.objId;
                 self.storage.keyPosition = 'jarvisWidgets_position_' + widget_url + '_' + self.objId;
             }
