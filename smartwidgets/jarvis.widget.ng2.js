@@ -434,7 +434,7 @@
                      **/
                     if (widgetId.children('header')
                         .children('h2')
-                        .text() != jsonSettings.widget[key].title) {
+                        .text() != jsonSettings.widget[key].title && self.o.customWidgetUrl) {
                         widgetId.children('header')
                             .children('h2')
                             .text(jsonSettings.widget[key].title);
